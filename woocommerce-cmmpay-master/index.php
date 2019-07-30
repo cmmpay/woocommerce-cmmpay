@@ -3,10 +3,10 @@
    Plugin Name: CMMPay Payment Gateway For WooCommerce
    Description: Accept crypto-currencies by CMMPay multi crypto payment processor
    Version: 5.0
-   Plugin URI: https://github.com/cmmpay/woocommerce-cmmpay
+   Plugin URI: https://github.com/cmmpay/woocommerce-cmmpay/releases/latest
    Author: Open Remit Ltd
    GPLAuthor: Ishan Verma 
-   Author URI: https://github.com/cmmpay/woocommerce-cmmpay
+   Author URI: https://github.com/cmmpay/woocommerce-cmmpay/releases/latest
    License: Under GPL2
    WC requires at least: 3.0.0
    WC tested up to: 3.5.3
@@ -149,7 +149,7 @@ function woocommerce_tech_autho_init() {
       {
          echo '<h3>'.__('CMMPay Payment Gateway', 'tech').'</h3>';
          echo '<p>'.__('CMMPay payment gateway for online crypto payment processing.').'</p>
-         <p><a href="https://github.com/cmmpay/woocommerce-cmmpay/">Check here for updates.</a></p>
+         <p><a href="https://github.com/cmmpay/woocommerce-cmmpay/releases/latest/">Check here for updates.</a></p>
          ';
          echo '<table class="form-table">';
          $this->generate_settings_html();

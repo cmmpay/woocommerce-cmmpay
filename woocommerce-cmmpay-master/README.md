@@ -11,7 +11,7 @@ Signature Key
 
 2. Get the plugin from github:
 
-https://github.com/cmmpay/cmmpay-plugins/releases/latest
+https://github.com/cmmpay/woocommerce-cmmpay/releases/latest
 
 Look for the woo-cmmpay.zip file and download it
 
