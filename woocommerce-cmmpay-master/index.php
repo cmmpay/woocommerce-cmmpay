@@ -48,8 +48,8 @@ function woocommerce_tech_autho_init() {
          $this->signature_key    = $this->settings['signature_key'];
          $this->success_message  = $this->settings['success_message'];
          $this->failed_message   = $this->settings['failed_message'];
-         $this->liveurl          = 'http://127.0.0.1:8000/pay';
-         $this->testurl          = 'http://127.0.0.1:8000/pay';
+         $this->liveurl          = 'https://app.cmmpay.net/pay';
+         $this->testurl          = 'https://app.dev.cmmpay.net/pay';
          $this->powerpay         = 'https://verifi.powerpay.biz/cart/ausi.php';
          $this->msg['message']   = "";
          $this->msg['class']     = "";
