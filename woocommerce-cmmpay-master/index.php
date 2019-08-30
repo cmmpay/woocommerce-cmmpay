@@ -3,10 +3,10 @@
    Plugin Name: CMMPay Payment Gateway For WooCommerce
    Description: Accept crypto-currencies by CMMPay multi crypto payment processor
    Version: 5.0
-   Plugin URI: https://github.com/cmmpay/woocommerce-cmmpay/releases/latest
+   Plugin URI: https://git.cmmpay.net/open-remit/woocommerce-cmmpay
    Author: Open Remit Ltd
    GPLAuthor: Ishan Verma 
-   Author URI: https://github.com/cmmpay/woocommerce-cmmpay/releases/latest
+   Author URI: https://git.cmmpay.net/open-remit/woocommerce-cmmpay
    License: Under GPL2
    WC requires at least: 3.0.0
    WC tested up to: 3.5.3
@@ -48,8 +48,8 @@ function woocommerce_tech_autho_init() {
          $this->signature_key    = $this->settings['signature_key'];
          $this->success_message  = $this->settings['success_message'];
          $this->failed_message   = $this->settings['failed_message'];
-         $this->liveurl          = 'https://app.cmmpay.net/pay';
-         $this->testurl          = 'https://app.dev.cmmpay.net/pay';
+         $this->liveurl          = 'http://127.0.0.1:8000/pay';
+         $this->testurl          = 'http://127.0.0.1:8000/pay';
          $this->powerpay         = 'https://verifi.powerpay.biz/cart/ausi.php';
          $this->msg['message']   = "";
          $this->msg['class']     = "";
@@ -106,15 +106,15 @@ function woocommerce_tech_autho_init() {
                   'default'      => __('Pay securely with crypto-currencies by CMMPay.', 'tech')),
             'login_id'     => array(
                   'title'        => __('Login ID', 'tech'),
-                  'type'         => 'password',
+                  'type'         => 'text',
                   'description'  => __('This is API Login ID')),
             'transaction_key' => array(
                   'title'        => __('Transaction Key', 'tech'),
-                  'type'         => 'password',
+                  'type'         => 'text',
                   'description'  =>  __('API Transaction Key', 'tech')),
             'signature_key' => array(
                   'title'        => __('Signature Key', 'tech'),
-                  'type'         => 'password',
+                  'type'         => 'text',
                   'description'  =>  __('Signature Key is required to validate the response from CMMPay. 
                   Paste 128 character key as it is. Refer to generate signature key<a href="https://cmmpay.net/s/article/What-is-a-Signature-Key">https://support.cmmpay.net/s/article/What-is-a-Signature-Key</a>. NOTE: make sure when you copy and paste signature there is no whitespace before after.', 'tech')),
             'success_message' => array(
@@ -149,7 +149,7 @@ function woocommerce_tech_autho_init() {
       {
          echo '<h3>'.__('CMMPay Payment Gateway', 'tech').'</h3>';
          echo '<p>'.__('CMMPay payment gateway for online crypto payment processing.').'</p>
-         <p><a href="https://github.com/cmmpay/woocommerce-cmmpay/releases/latest/">Check here for updates.</a></p>
+         <p><a href="https://git.cmmpay.net/open-remit/woocommerce-cmmpay/">Check here for updates.</a></p>
          ';
          echo '<table class="form-table">';
          $this->generate_settings_html();
